@@ -18,23 +18,34 @@ public class Main {
         hashMap.put(15,"Kevin");
         hashMap.put(35,"Alex");
 
+        System.out.println("HashMap contains:  " + hashMap);
+
+        // Creating another HashMap
+        HashMap<Integer,String> hashMap2 = new HashMap<Integer, String>();
+
+        // cloning first HashMap in the second one
+        hashMap2 = (HashMap)hashMap.clone();
+        System.out.println("Cloned map contains: " + hashMap2);
+
+
         //Display contents
         // create set view for the map
         Set set = hashMap.entrySet();
 
         // check set values
         System.out.println("Set values: " + set);
+
         //Get values based on key
         String keyval = hashMap.get(7);
         System.out.println("Value of key 7 is: "+ keyval);
 
         // Display content using Iterator
-        //et set = hashMap.entrySet();
+        //Set set = hashMap.entrySet();
         Iterator iterator = set.iterator();
         while(iterator.hasNext()) {
-            Map.Entry mentry = (Map.Entry)iterator.next();
-            System.out.print("Key is: "+ mentry.getKey() + " & Value is: ");
-            System.out.println(mentry.getValue());
+            Map.Entry mEntry = (Map.Entry)iterator.next();
+            System.out.print("Key is: "+ mEntry.getKey() + " & Value is: ");
+            System.out.println(mEntry.getValue());
         }
 
         //Remove values based on key
@@ -43,9 +54,9 @@ public class Main {
         Set set2 = hashMap.entrySet();
         Iterator iterator2 = set2.iterator();
         while(iterator2.hasNext()) {
-            Map.Entry mentry2 = (Map.Entry)iterator2.next();
-            System.out.print("Key is: "+mentry2.getKey() + " & Value is: ");
-            System.out.println(mentry2.getValue());
+            Map.Entry mEntry2 = (Map.Entry)iterator2.next();
+            System.out.print("Key is: "+mEntry2.getKey() + " & Value is: ");
+            System.out.println(mEntry2.getValue());
         }
     }
 }
