@@ -51,6 +51,7 @@ public class Main {
         //Remove values based on key
         hashMap.remove(7);
         System.out.println("\nMap key and values after removal:");
+
         Set set2 = hashMap.entrySet();
         Iterator iterator2 = set2.iterator();
         while(iterator2.hasNext()) {
@@ -64,8 +65,9 @@ public class Main {
 It is not an ordered collection which means it does not return the keys and values
 in the same order in which they have been inserted into the HashMap
 
+HashMap contains:  {2=Chris, 35=Alex, 5=Tom, 7=Matt, 15=Kevin}
+Cloned map contains: {2=Chris, 35=Alex, 5=Tom, 7=Matt, 15=Kevin}
 Set values: [2=Chris, 35=Alex, 5=Tom, 7=Matt, 15=Kevin]
-
 Value of key 7 is: Matt
 Key is: 2 & Value is: Chris
 Key is: 35 & Value is: Alex
@@ -78,4 +80,5 @@ Key is: 2 & Value is: Chris
 Key is: 35 & Value is: Alex
 Key is: 5 & Value is: Tom
 Key is: 15 & Value is: Kevin
+
 */
